@@ -1,0 +1,17 @@
+{
+    "name": "paquix/ma",
+    "description": "Calculate a moving average for weather statistics",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Paquix\\Ma\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitrii Makhno",
+            "email": "dmitrii.makhno@gmail.com"
+        }
+    ],
+    "require": {}
+}
