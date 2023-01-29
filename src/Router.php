@@ -2,15 +2,15 @@
 
 namespace Paquix\Ma;
 
-use Paquix\Ma\Request;
+use Paquix\Ma\RequestInterface;
 
 class Router
 {
 	private $request;
 	
-	public function __construct()
+	public function __construct(RequestInterface $request)
 	{
-		$this->request = new Request();
+		$this->request = $request;
 	}
 	
 	public function get(string $uri, array|callable $callback, array $params = null)

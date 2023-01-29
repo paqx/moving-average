@@ -2,12 +2,14 @@
 
 namespace Paquix\Ma;
 
-class Request
+use Paquix\Ma\RequestInterface;
+
+class Request implements RequestInterface
 {
 	private $method;
 	private $uri;
 	private $uriParams = [];
-			
+
 	public function __construct() 
 	{
 		$this->method = $_SERVER['REQUEST_METHOD'];
@@ -16,17 +18,17 @@ class Request
 		$this->uriParams = $_GET;
 	}
 	
-	public function getMethod() 
+	public function getMethod(): string
 	{
 		return $this->method;
 	}
 	
-	public function getUri() 
+	public function getUri(): string
 	{
 		return $this->uri;
 	}
 	
-	public function getUriParam(string $uriParam) 
+	public function getUriParam(string $uriParam): ?string
 	{
 		return $this->uriParams[$uriParam] ?? null;
 	}

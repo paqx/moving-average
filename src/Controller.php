@@ -6,6 +6,7 @@ use Paquix\Ma\Request;
 use Paquix\Ma\View;
 use Paquix\Ma\CsvParser;
 use Paquix\Ma\MaTable;
+use Paquix\Ma\Config;
 
 class Controller
 {
